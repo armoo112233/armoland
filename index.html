@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Armo_Land | Minecraft Server</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #0b0b0b;
+    border-bottom: 1px solid #3a2d0a;
+    padding: 22px;
+    text-align: center;
+}
+
+header h1 {
+    color: #d4af37;
+    font-size: 34px;
+}
+
+nav {
+    margin-top: 18px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: #070707;
+}
+
+.hero h2 {
+    color: #d4af37;
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #b8b8b8;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.ip-box {
+    display: inline-block;
+    background: #101010;
+    border: 1px solid #d4af37;
+    color: #f5d76e;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 20px;
+}
+
+.title {
+    text-align: center;
+    color: #d4af37;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    background: #101010;
+    border: 1px solid #2c250f;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #d4af37;
+    margin-bottom: 12px;
+}
+
+.feature p {
+    color: #aaaaaa;
+    line-height: 1.8;
+}
+
+.ranks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.rank {
+    display: block;
+    background: #101010;
+    border: 1px solid #30270d;
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.rank:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.15);
+}
+
+.rank h3 {
+    color: #d4af37;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+
+.rank p {
+    color: #b5b5b5;
+    margin-bottom: 9px;
+    line-height: 1.6;
+}
+
+.price {
+    color: #f5d76e;
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.rank-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.starter-details {
+    display: none;
+}
+
+.starter-details:target {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.90);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 25px 15px;
+}
+
+.details-box {
+    max-width: 620px;
+    margin: 30px auto;
+    background: #0d0d0d;
+    border: 1px solid #d4af37;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.12);
+}
+
+.details-box h2 {
+    color: #d4af37;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+.details-info {
+    background: #141414;
+    border: 1px solid #29220d;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.details-info p {
+    color: #dddddd;
+    margin: 8px 0;
+}
+
+.details-info strong {
+    color: #f5d76e;
+}
+
+.details-box h3 {
+    color: #d4af37;
+    margin: 22px 0 12px;
+}
+
+.details-box ul {
+    list-style: none;
+}
+
+.details-box li {
+    background: #141414;
+    border: 1px solid #211d12;
+    color: #dddddd;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 7px;
+}
+
+.buy {
+    display: block;
+    text-align: center;
+    background: #d4af37;
+    color: #080808;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 8px;
+    margin-top: 22px;
+}
+
+.buy:hover {
+    background: #f5d76e;
+}
+
+.close {
+    display: block;
+    text-align: center;
+    background: #181818;
+    border: 1px solid #393939;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.close:hover {
+    border-color: #d4af37;
+    color: #d4af37;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #aaaaaa;
+    margin: 12px;
+}
+
+footer {
+    background: #0b0b0b;
+    border-top: 1px solid #3a2d0a;
+    text-align: center;
+    padding: 25px;
+    color: #777777;
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    nav a {
+        margin: 0 6px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Armo_Land</h1>
+
+    <nav>
+        <a href="#home">خانه</a>
+        <a href="#features">امکانات</a>
+        <a href="#ranks">رنک‌ها</a>
+        <a href="#contact">ارتباط</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Armo_Land</h2>
+    <p>سرور ماینکرفت حرفه‌ای با امکانات متنوع</p>
+
+    <div class="ip-box">
+        armoland.mcsh.io
+    </div>
+</section>
+
+<section id="features">
+
+    <h2 class="title">امکانات سرور</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>Survival</h3>
+            <p>تجربه یک Survival جذاب با امکانات مختلف</p>
+        </div>
+
+        <div class="feature">
+            <h3>Economy</h3>
+            <p>سیستم اقتصادی و واحد پولی Armo_Coin</p>
+        </div>
+
+        <div class="feature">
+            <h3>Protection</h3>
+            <p>سیستم محافظت از زمین و آیتم‌های شما</p>
+        </div>
+
+        <div class="feature">
+            <h3>Events</h3>
+            <p>رویدادها و برنامه‌های مختلف داخل سرور</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="ranks">
+
+    <h2 class="title">رنک‌های سرور</h2>
+
+    <div class="ranks">
+
+        <a href="#starter-details" class="rank-link">
+            <div class="rank">
+                <h3>Starter</h3>
+                <p>مدت: ۱۵ روز</p>
+                <p>۱,۰۰۰ Armo_Coin</p>
+                <p>ست آهنی + ابزار آهنی + مواد غذایی اولیه</p>
+                <div class="price">۳۰ تومان</div>
+            </div>
+        </a>
+
+        <div class="rank">
+            <h3>VIP</h3>
+            <p>به‌زودی</p>
+        </div>
+
+        <div class="rank">
+            <h3>Epic</h3>
+            <p>به‌زودی</p>
+        </div>
+
+        <div class="rank">
+            <h3>MVP</h3>
+            <p>به‌زودی</p>
+        </div>
+
+        <div class="rank">
+            <h3>Legend</h3>
+            <p>به‌زودی</p>
+        </div>
+
+        <div class="rank">
+            <h3>God</h3>
+            <p>به‌زودی</p>
+        </div>
+
+        <div class="rank">
+            <h3>Sponsor</h3>
+            <p>به‌زودی</p>
+        </div>
+
+        <div class="rank">
+            <h3>King Armo</h3>
+            <p>به‌زودی</p>
+        </div>
+
+    </div>
+</section>
+
+<div id="starter-details" class="starter-details">
+
+    <div class="details-box">
+
+        <h2>Starter</h2>
+
+        <div class="details-info">
+            <p><strong>مدت:</strong> ۱۵ روز</p>
+            <p><strong>قیمت:</strong> ۳۰ تومان</p>
+            <p><strong>پاداش:</strong> ۱,۰۰۰ Armo_Coin</p>
+            <p><strong>رنگ تگ:</strong> سبز</p>
+            <p><strong>رنگ اسم در چت:</strong> سفید</p>
+        </div>
+
+        <h3>کیت Starter</h3>
+
+        <ul>
+            <li>کلاه آهنی × 1</li>
+            <li>سینه‌پوش آهنی × 1</li>
+            <li>شلوار آهنی × 1</li>
+            <li>چکمه آهنی × 1</li>
+            <li>شمشیر آهنی × 1</li>
+            <li>کلنگ آهنی × 1</li>
+            <li>تبر آهنی × 1</li>
+            <li>بیل آهنی × 1</li>
+            <li>نان × 1</li>
+            <li>استیک پخته × 2</li>
+            <li>گوشت خوک پخته × 2</li>
+            <li>سیب × 1</li>
+            <li>سنگ × 32</li>
+            <li>چوب بلوط × 16</li>
+            <li>زغال‌سنگ × 16</li>
+            <li>مشعل × 16</li>
+            <li>سطل آب × 1</li>
+            <li>میز ساخت × 1</li>
+            <li>تیر × 16</li>
+        </ul>
+
+        <a href="#" class="buy">
+            خرید Starter — ۳۰ تومان
+        </a>
+
+        <a href="#" class="close">
+            بستن
+        </a>
+
+    </div>
+
+</div>
+
+<section id="contact">
+
+    <h2 class="title">ارتباط با ما</h2>
+
+    <div class="contact">
+        <p>Minecraft Server: armoland.mcsh.io</p>
+        <p>Armo_Trix</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Armo_Land - تمامی حقوق محفوظ است.
+</footer>
+
+</body>
+  </html>
