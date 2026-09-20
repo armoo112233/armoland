@@ -533,8 +533,7 @@ armoland.mcsh.io
 حساب شما
 </h3>
 
-<p id="userInfo" style="color:#ccc;margin:15px 0">
-</p>
+<p id="userInfo" style="color:#ccc;margin:15px 0"></p>
 
 <button class="gold-btn" onclick="scrollToOrders()">
 سفارش‌های من
@@ -612,17 +611,11 @@ armoland.mcsh.io
 
 <h3>Starter</h3>
 
-<p>
-مدت: ۱۵ روز
-</p>
+<p>مدت: ۱۵ روز</p>
 
-<p>
-۱,۰۰۰ Armo_Coin
-</p>
+<p>۱,۰۰۰ Armo_Coin</p>
 
-<p>
-ست آهنی + ابزار آهنی + مواد غذایی اولیه
-</p>
+<p>ست آهنی + ابزار آهنی + مواد غذایی اولیه</p>
 
 <div class="price">
 ۳۰ تومان
@@ -632,40 +625,13 @@ armoland.mcsh.io
 
 </a>
 
-<div class="rank">
-<h3>VIP</h3>
-<p>به‌زودی</p>
-</div>
-
-<div class="rank">
-<h3>Epic</h3>
-<p>به‌زودی</p>
-</div>
-
-<div class="rank">
-<h3>MVP</h3>
-<p>به‌زودی</p>
-</div>
-
-<div class="rank">
-<h3>Legend</h3>
-<p>به‌زودی</p>
-</div>
-
-<div class="rank">
-<h3>God</h3>
-<p>به‌زودی</p>
-</div>
-
-<div class="rank">
-<h3>Sponsor</h3>
-<p>به‌زودی</p>
-</div>
-
-<div class="rank">
-<h3>King Armo</h3>
-<p>به‌زودی</p>
-</div>
+<div class="rank"><h3>VIP</h3><p>به‌زودی</p></div>
+<div class="rank"><h3>Epic</h3><p>به‌زودی</p></div>
+<div class="rank"><h3>MVP</h3><p>به‌زودی</p></div>
+<div class="rank"><h3>Legend</h3><p>به‌زودی</p></div>
+<div class="rank"><h3>God</h3><p>به‌زودی</p></div>
+<div class="rank"><h3>Sponsor</h3><p>به‌زودی</p></div>
+<div class="rank"><h3>King Armo</h3><p>به‌زودی</p></div>
 
 </div>
 
@@ -675,45 +641,21 @@ armoland.mcsh.io
 
 <div class="details-box">
 
-<h2>
-Starter
-</h2>
+<h2>Starter</h2>
 
 <div class="details-info">
 
-<p>
-<strong>مدت:</strong>
-۱۵ روز
-</p>
-
-<p>
-<strong>قیمت:</strong>
-۳۰ تومان
-</p>
-
-<p>
-<strong>پاداش:</strong>
-۱,۰۰۰ Armo_Coin
-</p>
-
-<p>
-<strong>رنگ تگ:</strong>
-سبز
-</p>
-
-<p>
-<strong>رنگ اسم در چت:</strong>
-سفید
-</p>
+<p><strong>مدت:</strong> ۱۵ روز</p>
+<p><strong>قیمت:</strong> ۳۰ تومان</p>
+<p><strong>پاداش:</strong> ۱,۰۰۰ Armo_Coin</p>
+<p><strong>رنگ تگ:</strong> سبز</p>
+<p><strong>رنگ اسم در چت:</strong> سفید</p>
 
 </div>
 
-<h3>
-کیت Starter
-</h3>
+<h3>کیت Starter</h3>
 
 <ul>
-
 <li>کلاه آهنی × 1</li>
 <li>سینه‌پوش آهنی × 1</li>
 <li>شلوار آهنی × 1</li>
@@ -733,7 +675,6 @@ Starter
 <li>سطل آب × 1</li>
 <li>میز ساخت × 1</li>
 <li>تیر × 16</li>
-
 </ul>
 
 <div id="purchaseArea">
@@ -761,22 +702,15 @@ onclick="startPurchase('Starter',30);return false;">
 
 <div class="contact">
 
-<p>
-Minecraft Server: armoland.mcsh.io
-</p>
-
-<p>
-Armo_Trix
-</p>
+<p>Minecraft Server: armoland.mcsh.io</p>
+<p>Armo_Trix</p>
 
 </div>
 
 </section>
 
 <footer>
-
 © 2026 Armo_Land - تمامی حقوق محفوظ است.
-
 </footer>
 
 <script>
@@ -801,7 +735,7 @@ let isAdmin = false;
 
 
 /* =========================
-   CHECK USER
+   USER
 ========================= */
 
 async function checkUser(){
@@ -819,14 +753,14 @@ await checkAdmin();
 updateAccount();
 
 if(currentUser){
-loadOrders();
+await loadOrders();
 }
 
 }
 
 
 /* =========================
-   CHECK ADMIN
+   ADMIN CHECK
 ========================= */
 
 async function checkAdmin(){
@@ -919,9 +853,7 @@ document.getElementById("loggedIn");
 if(currentUser){
 
 loggedOut.classList.add("hidden");
-
 signupBox.classList.add("hidden");
-
 loggedIn.classList.remove("hidden");
 
 const minecraft =
@@ -930,7 +862,7 @@ currentUser.user_metadata
 || "ثبت نشده";
 
 document.getElementById("userInfo").innerHTML =
-" Minecraft: <strong>" +
+"Minecraft: <strong>" +
 escapeHTML(minecraft) +
 "</strong><br><br>" +
 "ایمیل: " +
@@ -939,9 +871,7 @@ escapeHTML(currentUser.email || "");
 }else{
 
 loggedOut.classList.remove("hidden");
-
 signupBox.classList.add("hidden");
-
 loggedIn.classList.add("hidden");
 
 }
@@ -953,12 +883,10 @@ updateAdminUI();
 
 function showSignup(){
 
-document
-.getElementById("loggedOut")
+document.getElementById("loggedOut")
 .classList.add("hidden");
 
-document
-.getElementById("signupBox")
+document.getElementById("signupBox")
 .classList.remove("hidden");
 
 }
@@ -966,12 +894,10 @@ document
 
 function showLogin(){
 
-document
-.getElementById("signupBox")
+document.getElementById("signupBox")
 .classList.add("hidden");
 
-document
-.getElementById("loggedOut")
+document.getElementById("loggedOut")
 .classList.remove("hidden");
 
 }
@@ -1022,9 +948,8 @@ msg.textContent =
 const {data,error} =
 await supabaseClient.auth.signUp({
 
-email:email,
-
-password:password,
+email,
+password,
 
 options:{
 data:{
@@ -1037,8 +962,7 @@ minecraft_username:minecraft
 if(error){
 
 msg.textContent =
-"خطا: " +
-error.message;
+"خطا: " + error.message;
 
 return;
 
@@ -1053,7 +977,6 @@ msg.textContent =
 "حساب با موفقیت ساخته شد.";
 
 await checkAdmin();
-
 updateAccount();
 
 }else{
@@ -1098,9 +1021,8 @@ msg.textContent =
 const {data,error} =
 await supabaseClient.auth.signInWithPassword({
 
-email:email,
-
-password:password
+email,
+password
 
 });
 
@@ -1120,10 +1042,8 @@ msg.textContent =
 "با موفقیت وارد شدی.";
 
 await checkAdmin();
-
 updateAccount();
-
-loadOrders();
+await loadOrders();
 
 }
 
@@ -1141,16 +1061,13 @@ isAdmin = false;
 
 updateAccount();
 
-document
-.getElementById("orders")
+document.getElementById("orders")
 .classList.add("hidden");
 
-document
-.getElementById("admin")
+document.getElementById("admin")
 .classList.add("hidden");
 
-document
-.getElementById("authMessage")
+document.getElementById("authMessage")
 .textContent =
 "از حساب خارج شدی.";
 
@@ -1158,19 +1075,16 @@ document
 
 
 /* =========================
-   START PURCHASE
+   PURCHASE
 ========================= */
 
 async function startPurchase(rankName,amount){
 
 if(!currentUser){
 
-alert(
-"ابتدا باید وارد حساب کاربری شوی."
-);
+alert("ابتدا باید وارد حساب کاربری شوی.");
 
-location.hash =
-"account";
+location.hash="account";
 
 return;
 
@@ -1182,28 +1096,23 @@ currentUser.user_metadata
 
 if(!minecraft){
 
-alert(
-"نام Minecraft در حساب شما ثبت نشده است."
-);
+alert("نام Minecraft در حساب شما ثبت نشده است.");
 
-location.hash =
-"account";
+location.hash="account";
 
 return;
 
 }
 
 const area =
-document.getElementById(
-"purchaseArea"
-);
+document.getElementById("purchaseArea");
 
 area.innerHTML = `
 
 <div class="payment-box">
 
 <h3>
-پرداخت دستی ${rankName}
+پرداخت دستی ${escapeHTML(rankName)}
 </h3>
 
 <p style="color:#ccc;line-height:1.8">
@@ -1211,7 +1120,7 @@ area.innerHTML = `
 مبلغ قابل پرداخت:
 
 <strong style="color:#f5d76e">
-${amount} تومان
+${Number(amount).toLocaleString()} تومان
 </strong>
 
 <br><br>
@@ -1236,7 +1145,7 @@ accept="image/*"
 
 <button
 class="gold-btn"
-onclick="submitOrder('${rankName}',${amount})">
+onclick="submitOrder('${escapeJS(rankName)}',${Number(amount)})">
 
 ارسال رسید برای تأیید
 
@@ -1271,7 +1180,7 @@ document.getElementById("paymentMessage");
 const fileInput =
 document.getElementById("receiptFile");
 
-if(!fileInput.files.length){
+if(!fileInput || !fileInput.files.length){
 
 message.textContent =
 "ابتدا تصویر رسید را انتخاب کن.";
@@ -1316,6 +1225,9 @@ Math.random().toString(36).substring(2) +
 "." +
 extension;
 
+
+/* UPLOAD */
+
 const {error:uploadError} =
 await supabaseClient.storage
 .from("payment-receipts")
@@ -1338,12 +1250,15 @@ return;
 
 }
 
+
+/* ORDER */
+
 const minecraft =
 currentUser.user_metadata
 ?.minecraft_username
 || "";
 
-const {error:orderError} =
+const {data:orderData,error:orderError} =
 await supabaseClient
 .from("orders")
 .insert({
@@ -1351,11 +1266,13 @@ await supabaseClient
 user_id:currentUser.id,
 minecraft_username:minecraft,
 rank_name:rankName,
-amount:amount,
+amount:Number(amount),
 receipt_path:filePath,
 status:"pending"
 
-});
+})
+.select("id")
+.single();
 
 if(orderError){
 
@@ -1373,9 +1290,12 @@ return;
 
 message.innerHTML =
 "✅ رسید با موفقیت ارسال شد.<br>" +
+"شماره سفارش: " +
+escapeHTML(orderData?.id || "") +
+"<br>" +
 "سفارش شما در انتظار تأیید مدیریت است.";
 
-loadOrders();
+await loadOrders();
 
 }
 
@@ -1406,14 +1326,16 @@ await supabaseClient
 
 if(error){
 
-ordersList.textContent =
-"خطا در دریافت سفارش‌ها.";
+ordersList.innerHTML =
+"<p style='color:#ff7777'>خطا در دریافت سفارش‌ها:<br>" +
+escapeHTML(error.message) +
+"</p>";
 
 return;
 
 }
 
-if(!data || data.length === 0){
+if(!data || data.length===0){
 
 ordersList.innerHTML =
 "<p style='color:#aaa'>هنوز سفارشی ثبت نکرده‌ای.</p>";
@@ -1423,38 +1345,29 @@ return;
 }
 
 ordersList.innerHTML =
-data.map(order => {
+data.map(order=>{
 
-let statusText =
-"در انتظار تأیید";
+let statusText="در انتظار تأیید";
+let statusClass="status-pending";
 
-let statusClass =
-"status-pending";
+if(order.status==="approved"){
 
-if(order.status === "approved"){
-
-statusText =
-"تأیید شد";
-
-statusClass =
-"status-approved";
+statusText="تأیید شد";
+statusClass="status-approved";
 
 }
 
-if(order.status === "rejected"){
+if(order.status==="rejected"){
 
-statusText =
-"رد شد";
-
-statusClass =
-"status-rejected";
+statusText="رد شد";
+statusClass="status-rejected";
 
 }
 
-let reason = "";
+let reason="";
 
 if(
-order.status === "rejected" &&
+order.status==="rejected" &&
 order.reject_reason
 ){
 
@@ -1470,13 +1383,18 @@ return `
 
 <div class="order-card">
 
+<strong>شماره سفارش:</strong>
+${escapeHTML(order.id || "-")}
+
+<br>
+
 <strong>رنک:</strong>
-${escapeHTML(order.rank_name)}
+${escapeHTML(order.rank_name || "-")}
 
 <br>
 
 <strong>مبلغ:</strong>
-${Number(order.amount).toLocaleString()}
+${Number(order.amount || 0).toLocaleString()}
 تومان
 
 <br>
@@ -1516,11 +1434,13 @@ document.getElementById("adminMessage");
 box.innerHTML =
 "در حال دریافت سفارش‌ها...";
 
+
 const {data,error} =
 await supabaseClient
 .from("orders")
 .select("*")
 .order("created_at",{ascending:false});
+
 
 if(error){
 
@@ -1534,7 +1454,8 @@ return;
 
 }
 
-if(!data || data.length === 0){
+
+if(!data || data.length===0){
 
 box.innerHTML =
 "<p style='color:#aaa'>" +
@@ -1545,50 +1466,58 @@ return;
 
 }
 
-box.innerHTML = "";
 
-data.forEach(order => {
+box.innerHTML="";
+
+
+data.forEach(order=>{
 
 const div =
 document.createElement("div");
 
-div.className =
-"admin-order";
+div.className="admin-order";
 
-let statusText =
-"در انتظار تأیید";
 
-let statusClass =
-"status-pending";
+let statusText="در انتظار تأیید";
+let statusClass="status-pending";
 
-if(order.status === "approved"){
 
-statusText =
-"تأیید شده";
+if(order.status==="approved"){
 
-statusClass =
-"status-approved";
+statusText="تأیید شده";
+statusClass="status-approved";
 
 }
 
-if(order.status === "rejected"){
 
-statusText =
-"رد شده";
+if(order.status==="rejected"){
 
-statusClass =
-"status-rejected";
+statusText="رد شده";
+statusClass="status-rejected";
 
 }
+
 
 const date =
 order.created_at
 ? new Date(order.created_at).toLocaleString("fa-IR")
 : "-";
 
+
 div.innerHTML = `
 
 <div>
+
+<strong>
+🆔 شماره سفارش:
+</strong>
+
+${escapeHTML(order.id || "-")}
+
+</div>
+
+
+<div style="margin-top:8px">
 
 <strong>
 🎮 نام Minecraft:
@@ -1597,6 +1526,7 @@ div.innerHTML = `
 ${escapeHTML(order.minecraft_username || "-")}
 
 </div>
+
 
 <div style="margin-top:8px">
 
@@ -1607,6 +1537,7 @@ ${escapeHTML(order.minecraft_username || "-")}
 ${escapeHTML(order.rank_name || "-")}
 
 </div>
+
 
 <div style="margin-top:8px">
 
@@ -1619,6 +1550,7 @@ ${Number(order.amount || 0).toLocaleString()}
 
 </div>
 
+
 <div style="margin-top:8px">
 
 <strong>
@@ -1628,6 +1560,7 @@ ${Number(order.amount || 0).toLocaleString()}
 ${escapeHTML(date)}
 
 </div>
+
 
 <div style="margin-top:8px">
 
@@ -1641,6 +1574,7 @@ ${statusText}
 
 </div>
 
+
 <button
 class="receipt-btn"
 onclick="viewReceipt('${escapeJS(order.receipt_path || "")}')">
@@ -1649,8 +1583,9 @@ onclick="viewReceipt('${escapeJS(order.receipt_path || "")}')">
 
 </button>
 
+
 ${
-order.status === "pending"
+order.status==="pending"
 ?
 `
 
@@ -1658,15 +1593,16 @@ order.status === "pending"
 
 <button
 class="approve-btn"
-onclick="approveOrder('${escapeJS(order.receipt_path || "")}')">
+onclick="approveOrder('${escapeJS(order.id || "")}')">
 
 ✅ تأیید
 
 </button>
 
+
 <button
 class="reject-btn"
-onclick="rejectOrder('${escapeJS(order.receipt_path || "")}')">
+onclick="rejectOrder('${escapeJS(order.id || "")}')">
 
 ❌ رد
 
@@ -1679,8 +1615,9 @@ onclick="rejectOrder('${escapeJS(order.receipt_path || "")}')">
 ""
 }
 
+
 ${
-order.status === "rejected" && order.reject_reason
+order.status==="rejected" && order.reject_reason
 ?
 `
 
@@ -1708,6 +1645,7 @@ box.appendChild(div);
 
 });
 
+
 message.textContent =
 `${data.length} سفارش ثبت شده است.`;
 
@@ -1715,7 +1653,7 @@ message.textContent =
 
 
 /* =========================
-   VIEW RECEIPT
+   RECEIPT
 ========================= */
 
 async function viewReceipt(path){
@@ -1723,6 +1661,7 @@ async function viewReceipt(path){
 if(!isAdmin){
 
 alert("دسترسی غیرمجاز.");
+
 return;
 
 }
@@ -1730,6 +1669,7 @@ return;
 if(!path){
 
 alert("برای این سفارش رسیدی ثبت نشده است.");
+
 return;
 
 }
@@ -1753,6 +1693,7 @@ return;
 if(!data || !data.signedUrl){
 
 alert("لینک رسید ساخته نشد.");
+
 return;
 
 }
@@ -1766,21 +1707,23 @@ data.signedUrl,
 
 
 /* =========================
-   APPROVE ORDER
+   APPROVE
 ========================= */
 
-async function approveOrder(receiptPath){
+async function approveOrder(orderId){
 
 if(!isAdmin){
 
 alert("دسترسی غیرمجاز.");
+
 return;
 
 }
 
-if(!receiptPath){
+if(!orderId){
 
 alert("شناسه سفارش پیدا نشد.");
+
 return;
 
 }
@@ -1793,15 +1736,20 @@ confirm(
 if(!ok)
 return;
 
+
 const {data,error} =
 await supabaseClient
 .from("orders")
 .update({
+
 status:"approved",
 reject_reason:null
+
 })
-.eq("receipt_path",receiptPath)
-.select();
+.eq("id",orderId)
+.eq("status","pending")
+.select("id,status");
+
 
 if(error){
 
@@ -1814,48 +1762,58 @@ return;
 
 }
 
-if(!data || data.length === 0){
+
+if(!data || data.length===0){
 
 alert(
-"سفارش پیدا نشد یا تغییر داده نشد."
+"این سفارش پیدا نشد، قبلاً تغییر کرده یا دسترسی UPDATE وجود ندارد."
 );
+
+await loadAdminOrders();
 
 return;
 
 }
 
-alert(
-"✅ سفارش تأیید شد."
-);
+
+alert("✅ سفارش با موفقیت تأیید شد.");
+
+
+/* REFRESH */
 
 await loadAdminOrders();
 
 if(currentUser){
+
 await loadOrders();
+
 }
 
 }
 
 
 /* =========================
-   REJECT ORDER
+   REJECT
 ========================= */
 
-async function rejectOrder(receiptPath){
+async function rejectOrder(orderId){
 
 if(!isAdmin){
 
 alert("دسترسی غیرمجاز.");
+
 return;
 
 }
 
-if(!receiptPath){
+if(!orderId){
 
 alert("شناسه سفارش پیدا نشد.");
+
 return;
 
 }
+
 
 const reason =
 prompt(
@@ -1863,22 +1821,29 @@ prompt(
 "مشکلی در خرید شما وجود داشت؛ ممکن است پرداخت انجام نشده باشد یا رسید قابل تأیید نباشد."
 );
 
-if(reason === null)
+
+if(reason===null)
 return;
+
 
 const finalReason =
 reason.trim() ||
 "رسید یا پرداخت قابل تأیید نبود.";
 
+
 const {data,error} =
 await supabaseClient
 .from("orders")
 .update({
+
 status:"rejected",
 reject_reason:finalReason
+
 })
-.eq("receipt_path",receiptPath)
-.select();
+.eq("id",orderId)
+.eq("status","pending")
+.select("id,status");
+
 
 if(error){
 
@@ -1891,24 +1856,29 @@ return;
 
 }
 
-if(!data || data.length === 0){
+
+if(!data || data.length===0){
 
 alert(
-"سفارش پیدا نشد یا تغییر داده نشد."
+"این سفارش پیدا نشد، قبلاً تغییر کرده یا دسترسی UPDATE وجود ندارد."
 );
+
+await loadAdminOrders();
 
 return;
 
 }
 
-alert(
-"❌ سفارش رد شد."
-);
+
+alert("❌ سفارش با موفقیت رد شد.");
+
 
 await loadAdminOrders();
 
 if(currentUser){
+
 await loadOrders();
+
 }
 
 }
@@ -1923,6 +1893,7 @@ function scrollToAdmin(){
 if(!isAdmin){
 
 alert("دسترسی ادمین ندارید.");
+
 return;
 
 }
@@ -1943,7 +1914,7 @@ loadAdminOrders();
 
 
 /* =========================
-   USER ORDERS SCROLL
+   USER ORDERS
 ========================= */
 
 function scrollToOrders(){
@@ -1969,27 +1940,26 @@ function copyIP(){
 
 navigator.clipboard
 .writeText("armoland.mcsh.io")
-.then(() => {
+.then(()=>{
 
 document
 .getElementById("copyMessage")
-.textContent =
-"IP کپی شد ✅";
+.textContent="IP کپی شد ✅";
 
-setTimeout(() => {
+setTimeout(()=>{
 
 document
 .getElementById("copyMessage")
-.textContent = "";
+.textContent="";
 
 },2000);
 
 })
-.catch(() => {
+.catch(()=>{
 
 document
 .getElementById("copyMessage")
-.textContent =
+.textContent=
 "IP: armoland.mcsh.io";
 
 });
@@ -2003,7 +1973,7 @@ document
 
 function escapeHTML(text){
 
-return String(text || "")
+return String(text ?? "")
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
@@ -2019,9 +1989,11 @@ return String(text || "")
 
 function escapeJS(text){
 
-return String(text || "")
+return String(text ?? "")
 .replace(/\\/g,"\\\\")
-.replace(/'/g,"\\'");
+.replace(/'/g,"\\'")
+.replace(/\r/g,"\\r")
+.replace(/\n/g,"\\n");
 
 }
 
@@ -2031,7 +2003,7 @@ return String(text || "")
 ========================= */
 
 supabaseClient.auth.onAuthStateChange(
-async (_event,session) => {
+async (_event,session)=>{
 
 currentUser =
 session
@@ -2044,7 +2016,7 @@ updateAccount();
 
 if(currentUser){
 
-loadOrders();
+await loadOrders();
 
 }else{
 
