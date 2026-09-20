@@ -1707,7 +1707,7 @@ data.signedUrl,
 
 
 /* =========================
-   APPROVE
+   APPROVE - RPC
 ========================= */
 
 async function approveOrder(orderId){
@@ -1736,20 +1736,11 @@ confirm(
 if(!ok)
 return;
 
-
 const {data,error} =
 await supabaseClient
-.from("orders")
-.update({
-
-status:"approved",
-reject_reason:null
-
-})
-.eq("id",orderId)
-.eq("status","pending")
-.select("id,status");
-
+.rpc("approve_order",{
+p_order_id:orderId
+});
 
 if(error){
 
@@ -1762,11 +1753,10 @@ return;
 
 }
 
-
 if(!data || data.length===0){
 
 alert(
-"این سفارش پیدا نشد، قبلاً تغییر کرده یا دسترسی UPDATE وجود ندارد."
+"این سفارش پیدا نشد یا قبلاً تغییر کرده است."
 );
 
 await loadAdminOrders();
@@ -1775,11 +1765,7 @@ return;
 
 }
 
-
 alert("✅ سفارش با موفقیت تأیید شد.");
-
-
-/* REFRESH */
 
 await loadAdminOrders();
 
@@ -1793,7 +1779,7 @@ await loadOrders();
 
 
 /* =========================
-   REJECT
+   REJECT - RPC
 ========================= */
 
 async function rejectOrder(orderId){
@@ -1814,36 +1800,25 @@ return;
 
 }
 
-
 const reason =
 prompt(
 "دلیل رد سفارش را وارد کن:",
 "مشکلی در خرید شما وجود داشت؛ ممکن است پرداخت انجام نشده باشد یا رسید قابل تأیید نباشد."
 );
 
-
 if(reason===null)
 return;
-
 
 const finalReason =
 reason.trim() ||
 "رسید یا پرداخت قابل تأیید نبود.";
 
-
 const {data,error} =
 await supabaseClient
-.from("orders")
-.update({
-
-status:"rejected",
-reject_reason:finalReason
-
-})
-.eq("id",orderId)
-.eq("status","pending")
-.select("id,status");
-
+.rpc("reject_order",{
+p_order_id:orderId,
+p_reason:finalReason
+});
 
 if(error){
 
@@ -1856,11 +1831,10 @@ return;
 
 }
 
-
 if(!data || data.length===0){
 
 alert(
-"این سفارش پیدا نشد، قبلاً تغییر کرده یا دسترسی UPDATE وجود ندارد."
+"این سفارش پیدا نشد یا قبلاً تغییر کرده است."
 );
 
 await loadAdminOrders();
@@ -1869,9 +1843,7 @@ return;
 
 }
 
-
 alert("❌ سفارش با موفقیت رد شد.");
-
 
 await loadAdminOrders();
 
