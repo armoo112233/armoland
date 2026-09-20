@@ -414,15 +414,12 @@ flex-direction:column
 <a href="#account">حساب کاربری</a>
 <a href="#contact">ارتباط</a>
 
-<a id="adminNav"
-href="#admin"
-class="hidden">
+<a id="adminNav" href="#admin" class="hidden">
 پنل مدیریت
 </a>
 </nav>
 
 </header>
-
 
 <section class="hero" id="home">
 
@@ -439,7 +436,6 @@ armoland.mcsh.io
 <p id="copyMessage" class="message"></p>
 
 </section>
-
 
 <section id="features">
 
@@ -481,7 +477,6 @@ armoland.mcsh.io
 
 </section>
 
-
 <section id="account">
 
 <h2 class="title">
@@ -490,39 +485,25 @@ armoland.mcsh.io
 
 <div class="account-box">
 
-
 <div id="loggedOut">
 
 <h3 style="color:#d4af37;margin-bottom:18px">
 ورود
 </h3>
 
-<input
-id="loginEmail"
-type="email"
-placeholder="ایمیل"
->
+<input id="loginEmail" type="email" placeholder="ایمیل">
 
-<input
-id="loginPassword"
-type="password"
-placeholder="رمز عبور"
->
+<input id="loginPassword" type="password" placeholder="رمز عبور">
 
-<button
-class="gold-btn"
-onclick="login()">
+<button class="gold-btn" onclick="login()">
 ورود
 </button>
 
-<button
-class="dark-btn"
-onclick="showSignup()">
+<button class="dark-btn" onclick="showSignup()">
 ساخت حساب جدید
 </button>
 
 </div>
-
 
 <div id="signupBox" class="hidden">
 
@@ -530,38 +511,21 @@ onclick="showSignup()">
 ساخت حساب
 </h3>
 
-<input
-id="signupMinecraft"
-type="text"
-placeholder="نام کاربری Minecraft"
->
+<input id="signupMinecraft" type="text" placeholder="نام کاربری Minecraft">
 
-<input
-id="signupEmail"
-type="email"
-placeholder="ایمیل"
->
+<input id="signupEmail" type="email" placeholder="ایمیل">
 
-<input
-id="signupPassword"
-type="password"
-placeholder="رمز عبور"
->
+<input id="signupPassword" type="password" placeholder="رمز عبور">
 
-<button
-class="gold-btn"
-onclick="signup()">
+<button class="gold-btn" onclick="signup()">
 ثبت‌نام
 </button>
 
-<button
-class="dark-btn"
-onclick="showLogin()">
+<button class="dark-btn" onclick="showLogin()">
 بازگشت به ورود
 </button>
 
 </div>
-
 
 <div id="loggedIn" class="hidden">
 
@@ -569,42 +533,28 @@ onclick="showLogin()">
 حساب شما
 </h3>
 
-<p
-id="userInfo"
-style="color:#ccc;margin:15px 0">
+<p id="userInfo" style="color:#ccc;margin:15px 0">
 </p>
 
-<button
-class="gold-btn"
-onclick="scrollToOrders()">
+<button class="gold-btn" onclick="scrollToOrders()">
 سفارش‌های من
 </button>
 
-<button
-id="adminButton"
-class="gold-btn hidden"
-onclick="scrollToAdmin()">
+<button id="adminButton" class="gold-btn hidden" onclick="scrollToAdmin()">
 پنل مدیریت
 </button>
 
-<button
-class="dark-btn"
-onclick="logout()">
+<button class="dark-btn" onclick="logout()">
 خروج از حساب
 </button>
 
 </div>
 
-
-<p
-id="authMessage"
-class="message">
-</p>
+<p id="authMessage" class="message"></p>
 
 </div>
 
 </section>
-
 
 <section id="orders" class="hidden">
 
@@ -622,12 +572,7 @@ class="message">
 
 </section>
 
-
-<!-- ================= ADMIN PANEL ================= -->
-
-<section
-id="admin"
-class="hidden">
+<section id="admin" class="hidden">
 
 <h2 class="title">
 پنل مدیریت
@@ -643,10 +588,7 @@ class="hidden">
 
 </div>
 
-<p
-id="adminMessage"
-class="message">
-</p>
+<p id="adminMessage" class="message"></p>
 
 <div id="adminOrders">
 در حال دریافت سفارش‌ها...
@@ -656,7 +598,6 @@ class="message">
 
 </section>
 
-
 <section id="ranks">
 
 <h2 class="title">
@@ -665,10 +606,7 @@ class="message">
 
 <div class="ranks">
 
-
-<a
-href="#starter-details"
-class="rank-link">
+<a href="#starter-details" class="rank-link">
 
 <div class="rank">
 
@@ -693,7 +631,6 @@ class="rank-link">
 </div>
 
 </a>
-
 
 <div class="rank">
 <h3>VIP</h3>
@@ -734,10 +671,7 @@ class="rank-link">
 
 </section>
 
-
-<div
-id="starter-details"
-class="starter-details">
+<div id="starter-details" class="starter-details">
 
 <div class="details-box">
 
@@ -774,7 +708,6 @@ Starter
 
 </div>
 
-
 <h3>
 کیت Starter
 </h3>
@@ -803,29 +736,22 @@ Starter
 
 </ul>
 
-
 <div id="purchaseArea">
 
-<a
-href="#"
-class="buy"
+<a href="#" class="buy"
 onclick="startPurchase('Starter',30);return false;">
 خرید Starter — ۳۰ تومان
 </a>
 
 </div>
 
-
-<a
-href="#"
-class="close">
+<a href="#" class="close">
 بستن
 </a>
 
 </div>
 
 </div>
-
 
 <section id="contact">
 
@@ -847,13 +773,11 @@ Armo_Trix
 
 </section>
 
-
 <footer>
 
 © 2026 Armo_Land - تمامی حقوق محفوظ است.
 
 </footer>
-
 
 <script>
 
@@ -866,16 +790,13 @@ const SUPABASE_KEY =
 const ADMIN_UID =
 "c39fc745-f30c-4f22-9aa4-161e4f26ad90";
 
-
 const supabaseClient =
 supabase.createClient(
 SUPABASE_URL,
 SUPABASE_KEY
 );
 
-
 let currentUser = null;
-
 let isAdmin = false;
 
 
@@ -885,9 +806,7 @@ let isAdmin = false;
 
 async function checkUser(){
 
-const {
-data
-} =
+const {data} =
 await supabaseClient.auth.getSession();
 
 currentUser =
@@ -900,9 +819,7 @@ await checkAdmin();
 updateAccount();
 
 if(currentUser){
-
 loadOrders();
-
 }
 
 }
@@ -914,23 +831,14 @@ loadOrders();
 
 async function checkAdmin(){
 
-isAdmin =
-false;
+isAdmin = false;
 
 if(!currentUser){
 
 updateAdminUI();
-
 return;
 
 }
-
-
-/*
-فقط UID مشخص‌شده ادمین است.
-علاوه بر آن، وجود UID در جدول
-admin_users هم بررسی می‌شود.
-*/
 
 if(currentUser.id === ADMIN_UID){
 
@@ -938,10 +846,7 @@ isAdmin = true;
 
 }else{
 
-const {
-data,
-error
-} =
+const {data,error} =
 await supabaseClient
 .from("admin_users")
 .select("user_id")
@@ -949,9 +854,7 @@ await supabaseClient
 .maybeSingle();
 
 if(!error && data){
-
 isAdmin = true;
-
 }
 
 }
@@ -978,9 +881,7 @@ if(isAdmin){
 adminNav.classList.remove("hidden");
 
 if(adminButton){
-
 adminButton.classList.remove("hidden");
-
 }
 
 }else{
@@ -988,12 +889,11 @@ adminButton.classList.remove("hidden");
 adminNav.classList.add("hidden");
 
 if(adminButton){
-
 adminButton.classList.add("hidden");
-
 }
 
-document.getElementById("admin")
+document
+.getElementById("admin")
 .classList.add("hidden");
 
 }
@@ -1016,7 +916,6 @@ document.getElementById("signupBox");
 const loggedIn =
 document.getElementById("loggedIn");
 
-
 if(currentUser){
 
 loggedOut.classList.add("hidden");
@@ -1025,21 +924,17 @@ signupBox.classList.add("hidden");
 
 loggedIn.classList.remove("hidden");
 
-
 const minecraft =
 currentUser.user_metadata
 ?.minecraft_username
 || "ثبت نشده";
 
-
-document.getElementById("userInfo")
-.innerHTML =
+document.getElementById("userInfo").innerHTML =
 " Minecraft: <strong>" +
 escapeHTML(minecraft) +
 "</strong><br><br>" +
 "ایمیل: " +
 escapeHTML(currentUser.email || "");
-
 
 }else{
 
@@ -1089,25 +984,19 @@ document
 async function signup(){
 
 const minecraft =
-document
-.getElementById("signupMinecraft")
-.value
-.trim();
+document.getElementById("signupMinecraft")
+.value.trim();
 
 const email =
-document
-.getElementById("signupEmail")
-.value
-.trim();
+document.getElementById("signupEmail")
+.value.trim();
 
 const password =
-document
-.getElementById("signupPassword")
+document.getElementById("signupPassword")
 .value;
 
 const msg =
 document.getElementById("authMessage");
-
 
 if(!minecraft || !email || !password){
 
@@ -1118,7 +1007,6 @@ return;
 
 }
 
-
 if(password.length < 6){
 
 msg.textContent =
@@ -1128,15 +1016,10 @@ return;
 
 }
 
-
 msg.textContent =
 "در حال ساخت حساب...";
 
-
-const {
-data,
-error
-} =
+const {data,error} =
 await supabaseClient.auth.signUp({
 
 email:email,
@@ -1144,17 +1027,12 @@ email:email,
 password:password,
 
 options:{
-
 data:{
-
 minecraft_username:minecraft
-
 }
-
 }
 
 });
-
 
 if(error){
 
@@ -1165,7 +1043,6 @@ error.message;
 return;
 
 }
-
 
 if(data.session){
 
@@ -1196,19 +1073,15 @@ msg.textContent =
 async function login(){
 
 const email =
-document
-.getElementById("loginEmail")
-.value
-.trim();
+document.getElementById("loginEmail")
+.value.trim();
 
 const password =
-document
-.getElementById("loginPassword")
+document.getElementById("loginPassword")
 .value;
 
 const msg =
 document.getElementById("authMessage");
-
 
 if(!email || !password){
 
@@ -1219,15 +1092,10 @@ return;
 
 }
 
-
 msg.textContent =
 "در حال ورود...";
 
-
-const {
-data,
-error
-} =
+const {data,error} =
 await supabaseClient.auth.signInWithPassword({
 
 email:email,
@@ -1235,7 +1103,6 @@ email:email,
 password:password
 
 });
-
 
 if(error){
 
@@ -1245,7 +1112,6 @@ msg.textContent =
 return;
 
 }
-
 
 currentUser =
 data.user;
@@ -1271,7 +1137,6 @@ async function logout(){
 await supabaseClient.auth.signOut();
 
 currentUser = null;
-
 isAdmin = false;
 
 updateAccount();
@@ -1296,10 +1161,7 @@ document
    START PURCHASE
 ========================= */
 
-async function startPurchase(
-rankName,
-amount
-){
+async function startPurchase(rankName,amount){
 
 if(!currentUser){
 
@@ -1314,11 +1176,9 @@ return;
 
 }
 
-
 const minecraft =
 currentUser.user_metadata
 ?.minecraft_username;
-
 
 if(!minecraft){
 
@@ -1333,12 +1193,10 @@ return;
 
 }
 
-
 const area =
 document.getElementById(
 "purchaseArea"
 );
-
 
 area.innerHTML = `
 
@@ -1363,13 +1221,11 @@ ${amount} تومان
 
 </p>
 
-
 <p style="color:#aaa;margin-top:12px">
 
 اطلاعات پرداخت را بعداً اینجا قرار می‌دهیم.
 
 </p>
-
 
 <input
 id="receiptFile"
@@ -1377,7 +1233,6 @@ class="file-input"
 type="file"
 accept="image/*"
 >
-
 
 <button
 class="gold-btn"
@@ -1387,7 +1242,6 @@ onclick="submitOrder('${rankName}',${amount})">
 
 </button>
 
-
 <button
 class="dark-btn"
 onclick="location.reload()">
@@ -1396,11 +1250,7 @@ onclick="location.reload()">
 
 </button>
 
-
-<p
-id="paymentMessage"
-class="message">
-</p>
+<p id="paymentMessage" class="message"></p>
 
 </div>
 
@@ -1413,21 +1263,13 @@ class="message">
    SUBMIT ORDER
 ========================= */
 
-async function submitOrder(
-rankName,
-amount
-){
+async function submitOrder(rankName,amount){
 
 const message =
-document.getElementById(
-"paymentMessage"
-);
+document.getElementById("paymentMessage");
 
 const fileInput =
-document.getElementById(
-"receiptFile"
-);
-
+document.getElementById("receiptFile");
 
 if(!fileInput.files.length){
 
@@ -1438,10 +1280,8 @@ return;
 
 }
 
-
 const file =
 fileInput.files[0];
-
 
 if(!file.type.startsWith("image/")){
 
@@ -1452,9 +1292,7 @@ return;
 
 }
 
-
-if(file.size >
-5 * 1024 * 1024){
+if(file.size > 5 * 1024 * 1024){
 
 message.textContent =
 "حجم رسید نباید بیشتر از ۵ مگابایت باشد.";
@@ -1463,33 +1301,22 @@ return;
 
 }
 
-
 message.textContent =
 "در حال ارسال رسید...";
 
-
 const extension =
-file.name
-.split(".")
-.pop()
-.toLowerCase();
-
+file.name.split(".").pop().toLowerCase();
 
 const filePath =
 currentUser.id +
 "/" +
 Date.now() +
 "-" +
-Math.random()
-.toString(36)
-.substring(2) +
+Math.random().toString(36).substring(2) +
 "." +
 extension;
 
-
-const {
-error:uploadError
-} =
+const {error:uploadError} =
 await supabaseClient.storage
 .from("payment-receipts")
 .upload(
@@ -1501,7 +1328,6 @@ upsert:false
 }
 );
 
-
 if(uploadError){
 
 message.textContent =
@@ -1512,41 +1338,30 @@ return;
 
 }
 
-
 const minecraft =
 currentUser.user_metadata
 ?.minecraft_username
 || "";
 
-
-const {
-error:orderError
-} =
+const {error:orderError} =
 await supabaseClient
 .from("orders")
 .insert({
 
 user_id:currentUser.id,
-
 minecraft_username:minecraft,
-
 rank_name:rankName,
-
 amount:amount,
-
 receipt_path:filePath,
-
 status:"pending"
 
 });
-
 
 if(orderError){
 
 await supabaseClient.storage
 .from("payment-receipts")
 .remove([filePath]);
-
 
 message.textContent =
 "خطا در ثبت سفارش: " +
@@ -1556,11 +1371,9 @@ return;
 
 }
 
-
 message.innerHTML =
 "✅ رسید با موفقیت ارسال شد.<br>" +
 "سفارش شما در انتظار تأیید مدیریت است.";
-
 
 loadOrders();
 
@@ -1576,32 +1389,20 @@ async function loadOrders(){
 if(!currentUser)
 return;
 
-
 const ordersSection =
 document.getElementById("orders");
 
 const ordersList =
 document.getElementById("ordersList");
 
+ordersSection.classList.remove("hidden");
 
-ordersSection.classList.remove(
-"hidden"
-);
-
-
-const {
-data,
-error
-} =
+const {data,error} =
 await supabaseClient
 .from("orders")
 .select("*")
 .eq("user_id",currentUser.id)
-.order(
-"created_at",
-{ascending:false}
-);
-
+.order("created_at",{ascending:false});
 
 if(error){
 
@@ -1612,9 +1413,7 @@ return;
 
 }
 
-
-if(!data ||
-data.length === 0){
+if(!data || data.length === 0){
 
 ordersList.innerHTML =
 "<p style='color:#aaa'>هنوز سفارشی ثبت نکرده‌ای.</p>";
@@ -1622,7 +1421,6 @@ ordersList.innerHTML =
 return;
 
 }
-
 
 ordersList.innerHTML =
 data.map(order => {
@@ -1632,7 +1430,6 @@ let statusText =
 
 let statusClass =
 "status-pending";
-
 
 if(order.status === "approved"){
 
@@ -1644,7 +1441,6 @@ statusClass =
 
 }
 
-
 if(order.status === "rejected"){
 
 statusText =
@@ -1655,9 +1451,7 @@ statusClass =
 
 }
 
-
 let reason = "";
-
 
 if(
 order.status === "rejected" &&
@@ -1667,13 +1461,10 @@ order.reject_reason
 reason =
 "<br><span style='color:#ff9999'>" +
 "دلیل: " +
-escapeHTML(
-order.reject_reason
-) +
+escapeHTML(order.reject_reason) +
 "</span>";
 
 }
-
 
 return `
 
@@ -1685,8 +1476,7 @@ ${escapeHTML(order.rank_name)}
 <br>
 
 <strong>مبلغ:</strong>
-${Number(order.amount)
-.toLocaleString()}
+${Number(order.amount).toLocaleString()}
 تومان
 
 <br>
@@ -1714,41 +1504,23 @@ ${reason}
 
 async function loadAdminOrders(){
 
-if(!isAdmin){
-
+if(!isAdmin)
 return;
 
-}
-
-
 const box =
-document.getElementById(
-"adminOrders"
-);
-
+document.getElementById("adminOrders");
 
 const message =
-document.getElementById(
-"adminMessage"
-);
-
+document.getElementById("adminMessage");
 
 box.innerHTML =
 "در حال دریافت سفارش‌ها...";
 
-
-const {
-data,
-error
-} =
+const {data,error} =
 await supabaseClient
 .from("orders")
 .select("*")
-.order(
-"created_at",
-{ascending:false}
-);
-
+.order("created_at",{ascending:false});
 
 if(error){
 
@@ -1762,9 +1534,7 @@ return;
 
 }
 
-
-if(!data ||
-data.length === 0){
+if(!data || data.length === 0){
 
 box.innerHTML =
 "<p style='color:#aaa'>" +
@@ -1775,9 +1545,7 @@ return;
 
 }
 
-
 box.innerHTML = "";
-
 
 data.forEach(order => {
 
@@ -1787,13 +1555,11 @@ document.createElement("div");
 div.className =
 "admin-order";
 
-
 let statusText =
 "در انتظار تأیید";
 
 let statusClass =
 "status-pending";
-
 
 if(order.status === "approved"){
 
@@ -1805,7 +1571,6 @@ statusClass =
 
 }
 
-
 if(order.status === "rejected"){
 
 statusText =
@@ -1816,14 +1581,10 @@ statusClass =
 
 }
 
-
 const date =
 order.created_at
-? new Date(
-order.created_at
-).toLocaleString("fa-IR")
+? new Date(order.created_at).toLocaleString("fa-IR")
 : "-";
-
 
 div.innerHTML = `
 
@@ -1833,13 +1594,9 @@ div.innerHTML = `
 🎮 نام Minecraft:
 </strong>
 
-${escapeHTML(
-order.minecraft_username
-|| "-"
-)}
+${escapeHTML(order.minecraft_username || "-")}
 
 </div>
-
 
 <div style="margin-top:8px">
 
@@ -1847,13 +1604,9 @@ order.minecraft_username
 🏷️ رنک:
 </strong>
 
-${escapeHTML(
-order.rank_name
-|| "-"
-)}
+${escapeHTML(order.rank_name || "-")}
 
 </div>
-
 
 <div style="margin-top:8px">
 
@@ -1861,14 +1614,10 @@ order.rank_name
 💰 مبلغ:
 </strong>
 
-${Number(
-order.amount || 0
-).toLocaleString()}
-
+${Number(order.amount || 0).toLocaleString()}
 تومان
 
 </div>
-
 
 <div style="margin-top:8px">
 
@@ -1879,7 +1628,6 @@ order.amount || 0
 ${escapeHTML(date)}
 
 </div>
-
 
 <div style="margin-top:8px">
 
@@ -1893,7 +1641,6 @@ ${statusText}
 
 </div>
 
-
 <button
 class="receipt-btn"
 onclick="viewReceipt('${escapeJS(order.receipt_path || "")}')">
@@ -1902,28 +1649,24 @@ onclick="viewReceipt('${escapeJS(order.receipt_path || "")}')">
 
 </button>
 
-
 ${
 order.status === "pending"
-
 ?
-
 `
 
 <div class="admin-actions">
 
 <button
 class="approve-btn"
-onclick="approveOrder('${escapeJS(order.id)}')">
+onclick="approveOrder('${escapeJS(order.receipt_path || "")}')">
 
 ✅ تأیید
 
 </button>
 
-
 <button
 class="reject-btn"
-onclick="rejectOrder('${escapeJS(order.id)}')">
+onclick="rejectOrder('${escapeJS(order.receipt_path || "")}')">
 
 ❌ رد
 
@@ -1932,20 +1675,13 @@ onclick="rejectOrder('${escapeJS(order.id)}')">
 </div>
 
 `
-
 :
-
 ""
-
 }
 
-
 ${
-order.status === "rejected" &&
-order.reject_reason
-
+order.status === "rejected" && order.reject_reason
 ?
-
 `
 
 <div style="
@@ -1957,27 +1693,20 @@ line-height:1.8">
 دلیل رد:
 </strong>
 
-${escapeHTML(
-order.reject_reason
-)}
+${escapeHTML(order.reject_reason)}
 
 </div>
 
 `
-
 :
-
 ""
-
 }
 
 `;
 
-
 box.appendChild(div);
 
 });
-
 
 message.textContent =
 `${data.length} سفارش ثبت شده است.`;
@@ -1993,37 +1722,22 @@ async function viewReceipt(path){
 
 if(!isAdmin){
 
-alert(
-"دسترسی غیرمجاز."
-);
-
+alert("دسترسی غیرمجاز.");
 return;
 
 }
-
 
 if(!path){
 
-alert(
-"برای این سفارش رسیدی ثبت نشده است."
-);
-
+alert("برای این سفارش رسیدی ثبت نشده است.");
 return;
 
 }
 
-
-const {
-data,
-error
-} =
+const {data,error} =
 await supabaseClient.storage
 .from("payment-receipts")
-.createSignedUrl(
-path,
-300
-);
-
+.createSignedUrl(path,300);
 
 if(error){
 
@@ -2036,18 +1750,12 @@ return;
 
 }
 
+if(!data || !data.signedUrl){
 
-if(!data ||
-!data.signedUrl){
-
-alert(
-"لینک رسید ساخته نشد."
-);
-
+alert("لینک رسید ساخته نشد.");
 return;
 
 }
-
 
 window.open(
 data.signedUrl,
@@ -2061,43 +1769,39 @@ data.signedUrl,
    APPROVE ORDER
 ========================= */
 
-async function approveOrder(id){
+async function approveOrder(receiptPath){
 
 if(!isAdmin){
 
-alert(
-"دسترسی غیرمجاز."
-);
-
+alert("دسترسی غیرمجاز.");
 return;
 
 }
 
+if(!receiptPath){
+
+alert("شناسه سفارش پیدا نشد.");
+return;
+
+}
 
 const ok =
 confirm(
 "آیا مطمئنی می‌خواهی این سفارش را تأیید کنی؟"
 );
 
-
 if(!ok)
 return;
 
-
-const {
-error
-} =
+const {data,error} =
 await supabaseClient
 .from("orders")
 .update({
-
 status:"approved",
-
 reject_reason:null
-
 })
-.eq("id",id);
-
+.eq("receipt_path",receiptPath)
+.select();
 
 if(error){
 
@@ -2110,13 +1814,25 @@ return;
 
 }
 
+if(!data || data.length === 0){
+
+alert(
+"سفارش پیدا نشد یا تغییر داده نشد."
+);
+
+return;
+
+}
 
 alert(
 "✅ سفارش تأیید شد."
 );
 
-
 await loadAdminOrders();
+
+if(currentUser){
+await loadOrders();
+}
 
 }
 
@@ -2125,18 +1841,21 @@ await loadAdminOrders();
    REJECT ORDER
 ========================= */
 
-async function rejectOrder(id){
+async function rejectOrder(receiptPath){
 
 if(!isAdmin){
 
-alert(
-"دسترسی غیرمجاز."
-);
-
+alert("دسترسی غیرمجاز.");
 return;
 
 }
 
+if(!receiptPath){
+
+alert("شناسه سفارش پیدا نشد.");
+return;
+
+}
 
 const reason =
 prompt(
@@ -2144,30 +1863,22 @@ prompt(
 "مشکلی در خرید شما وجود داشت؛ ممکن است پرداخت انجام نشده باشد یا رسید قابل تأیید نباشد."
 );
 
-
 if(reason === null)
 return;
-
 
 const finalReason =
 reason.trim() ||
 "رسید یا پرداخت قابل تأیید نبود.";
 
-
-const {
-error
-} =
+const {data,error} =
 await supabaseClient
 .from("orders")
 .update({
-
 status:"rejected",
-
 reject_reason:finalReason
-
 })
-.eq("id",id);
-
+.eq("receipt_path",receiptPath)
+.select();
 
 if(error){
 
@@ -2180,13 +1891,25 @@ return;
 
 }
 
+if(!data || data.length === 0){
+
+alert(
+"سفارش پیدا نشد یا تغییر داده نشد."
+);
+
+return;
+
+}
 
 alert(
 "❌ سفارش رد شد."
 );
 
-
 await loadAdminOrders();
+
+if(currentUser){
+await loadOrders();
+}
 
 }
 
@@ -2199,26 +1922,20 @@ function scrollToAdmin(){
 
 if(!isAdmin){
 
-alert(
-"دسترسی ادمین ندارید."
-);
-
+alert("دسترسی ادمین ندارید.");
 return;
 
 }
 
-
 document
 .getElementById("admin")
 .classList.remove("hidden");
-
 
 document
 .getElementById("admin")
 .scrollIntoView({
 behavior:"smooth"
 });
-
 
 loadAdminOrders();
 
@@ -2234,7 +1951,6 @@ function scrollToOrders(){
 document
 .getElementById("orders")
 .classList.remove("hidden");
-
 
 document
 .getElementById("orders")
@@ -2252,16 +1968,13 @@ behavior:"smooth"
 function copyIP(){
 
 navigator.clipboard
-.writeText(
-"armoland.mcsh.io"
-)
+.writeText("armoland.mcsh.io")
 .then(() => {
 
 document
 .getElementById("copyMessage")
 .textContent =
 "IP کپی شد ✅";
-
 
 setTimeout(() => {
 
@@ -2325,11 +2038,9 @@ session
 ? session.user
 : null;
 
-
 await checkAdmin();
 
 updateAccount();
-
 
 if(currentUser){
 
@@ -2356,4 +2067,4 @@ checkUser();
 </script>
 
 </body>
-    </html>
+   </html>
